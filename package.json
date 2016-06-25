@@ -1,0 +1,17 @@
+{
+  "name": "tweet.d",
+  "version": "1.0.0",
+  "description": "Typescript Tweet definition for pusharray.com",
+  "main": "",
+  "typings": "index.d.ts",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/logashoff/tweet.d.git"
+  },
+  "author": "Alex Logashov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/logashoff/tweet.d/issues"
+  }
+}
