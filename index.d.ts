@@ -18,21 +18,34 @@ export type MediaSizes = {
   medium: MediaSize;
 }
 
+export type VideoVariant = {
+  bitrate: number;
+  content_type: string;
+  url: string;
+}
+
+export type VideoInfo = {
+  aspect_ratio?: number[],
+  duration_millis: number,
+  variants?: VideoVariant[];
+}
+
 export type TweetMedia = {
-  display_url: string;
-  expanded_url: string;
   id: number;
   id_str: string;
-  indices: number[];
   media_url: string;
   media_url_https: string;
+  url: string;
+  display_url: string;
+  expanded_url: string;
   sizes: MediaSizes;
   source_status_id: number;
   source_status_id_str: string;
-  source_user_id: number;
-  source_user_id_str: string;
   type: string;
-  url: string;
+  indices: number[];
+  video_info: VideoInfo
+  source_user_id?: number;
+  source_user_id_str?: string;
 }
 
 export type TweetHashtag = {
@@ -47,7 +60,7 @@ export type TweetSymbol = {
 
 export type TweetEntity = {
   hashtags: TweetHashtag[];
-  symbols: TweetSymbol[];
+  symbols?: TweetSymbol[];
   urls: TweetUrl[];
   user_mentions: TweetMention[];
   media?: TweetMedia[];
